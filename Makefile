@@ -9,6 +9,8 @@ ifeq ($(findstring 10,$(BRANCH)),10)
 else
     ROM := MIUI
     NAME := OxygenTech-$(ROM)-Pie-$(DEVICE)
+    DATE := $(shell date "+%Y%m%d-%H%M")
+    ZIP := $(NAME)-$(DATE).zip
 endif
 
 EXCLUDE := Makefile *.git* *.jar* *placeholder* *.md*
