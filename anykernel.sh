@@ -8,13 +8,13 @@ kernel.string=Oxygen Tech Kernel
 do.devicecheck=1
 do.modules=1
 do.cleanup=1
-do.cleanuponabort=1
-device.name1=
+do.cleanuponabort=0
+device.name1=universal
 device.name2=
 device.name3=
 device.name4=
 device.name5=
-supported.versions=
+supported.versions=9 - 10
 supported.patchlevels=
 '; } # end properties
 
@@ -38,9 +38,6 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 ## AnyKernel install
 dump_boot;
 
-# begin ramdisk changes
-
-# end ramdisk changes
 
 write_boot;
 ## end install

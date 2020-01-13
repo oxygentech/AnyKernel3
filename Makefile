@@ -9,11 +9,8 @@ ifeq ($(findstring 10,$(BRANCH)),10)
 else
     ROM := MIUI
     NAME := OxygenTech-$(ROM)-Pie-$(DEVICE)
-    DATE := $(shell date "+%Y%m%d-%H%M")
-    ZIP := $(NAME)-$(DATE).zip
-endif
 
-EXCLUDE := Makefile *.git* *.jar* *placeholder* *.md* *.zip* LICENSE
+EXCLUDE := Makefile *.git* *.jar* *placeholder* *.md*
 
 normal: $(ZIP)
 
@@ -25,7 +22,6 @@ $(ZIP):
 clean:
 	rm -vf *.zip
 	rm -vf *.gz-dtb
-	rm -vf kernel/*.gz
-	rm -vf dtbs/*.dtb
 	rm -vf modules/vendor/lib/modules/*.ko
 	echo "Cleaning done."
+
